@@ -1,12 +1,13 @@
 #!/bin/bash
 
-echo "Iniciando Ollama Server..."
+echo "Iniciando servidor Ollama..."
 ollama serve &
 
+# espera o server inicializar
 sleep 5
 
-echo "Servidor iniciado."
-echo "Container ativo. Press Ctrl+C para sair."
+echo "Baixando modelo llama3:8b-instruct-q4_K_M..."
+ollama pull llama3:8b-instruct-q4_K_M
 
-# Mantém o container acordado para sempre
+echo "Modelo pronto. Mantendo o container ativo."
 tail -f /dev/null
