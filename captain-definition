@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "dockerfilePath": "./Dockerfile",
+  "serviceName": "ollama",
+  "containerHttpPort": 11434,
+  "caproverExtra": {
+    "dockerSwarmExtra": {
+      "deploy": {
+        "resources": {
+          "limits": {
+            "memory": "0"
+          },
+          "reservations": {
+            "memory": "0"
+          }
+        }
+      }
+    }
+  }
+}
